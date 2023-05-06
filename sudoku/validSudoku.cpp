@@ -63,6 +63,6 @@ bool validSquares(const std::vector<std::vector<int>>& board) {
     return true;
 }
 
-bool validSudoku(std::vector<std::vector<int>>& board) {
+bool validSudoku(const std::vector<std::vector<int>>& board) {
     return (validRows(board) && validCols(board) && validSquares(board));
 }
