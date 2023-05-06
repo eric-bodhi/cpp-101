@@ -1,5 +1,5 @@
-#include "generator.hpp"
-#include "validSudoku.hpp"
+#include "generator.cpp"
+#include "validSudoku.cpp"
 #include <iostream>
 #include <vector>
 #include <algorithm>
