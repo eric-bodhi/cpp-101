@@ -1,5 +1,3 @@
-#ifndef SUDOKU_BOARD_GENERATOR_HPP
-#define SUDOKU_BOARD_GENERATOR_HPP
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -70,5 +68,3 @@ std::vector<std::vector<int>> makePlayable(std::vector<std::vector<int>> board, 
 
     return board;
 }
-
-#endif
