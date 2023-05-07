@@ -4,7 +4,8 @@
 #include <random>
 #include <iterator>
 
-std::vector<int> shuffle(const std::vector<int>& v) {
+// shuffle function "shuffles" a vector input, i.e. randomizes it
+std::vector<int> shuffle(const std::vector<int>& v) { 
     std::vector<int> result = v;
     std::random_device rd;
     std::mt19937 g(rd());
@@ -12,11 +13,13 @@ std::vector<int> shuffle(const std::vector<int>& v) {
     return result;
 }
 
+// returns the sudoku baseline solution
 int pattern(int r, int c, int base) {
     int side = base * base;
     return (base * (r % base) + r / base + c) % side;
 }
 
+// generates the sudoku board by shuffling the rows and cols, and then shuffling the baseline solution
 std::vector<std::vector<int>> generate() {
     int base = 3;
     int side = base * base;
@@ -53,6 +56,7 @@ std::vector<std::vector<int>> generate() {
     return board;
 }
 
+// makes the solved board playable by removing val cells
 std::vector<std::vector<int>> makePlayable(std::vector<std::vector<int>>& board, int val) {
     std::vector<int> indices(81);
     std::iota(indices.begin(), indices.end(), 0);

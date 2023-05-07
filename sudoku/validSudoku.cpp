@@ -2,7 +2,8 @@
 #include <algorithm>
 #include "validSudoku.hpp"
 
-bool validUnit(const std::vector<int>& unit) {
+// checks if a given unit (square, col, or row) follows rules of sudoku
+bool validUnit(const std::vector<int>& unit) { 
     std::vector<int> seen;
 
     for (const auto &i : unit) {
@@ -18,6 +19,7 @@ bool validUnit(const std::vector<int>& unit) {
     return true;
 }
 
+// checks if rows are valid (according to sudoku)
 bool validRows(const std::vector<std::vector<int>>& board) {
     for (const auto &row : board) {
         if (!validUnit(row)) {
@@ -28,6 +30,7 @@ bool validRows(const std::vector<std::vector<int>>& board) {
     return true;
 }
 
+// checks if cols are valid (according to sudoku)
 bool validCols(const std::vector<std::vector<int>>& board) {
     std::vector<std::vector<int>> columns(9, std::vector<int>(9));
 
@@ -46,6 +49,7 @@ bool validCols(const std::vector<std::vector<int>>& board) {
     return true;
 }
 
+// checks if squares are valid (according to sudoku)
 bool validSquares(const std::vector<std::vector<int>>& board) {
     for (int i = 3; i < 10; i += 3) {
         for (int j = 3; j < 10; j += 3) {
@@ -64,6 +68,7 @@ bool validSquares(const std::vector<std::vector<int>>& board) {
     return true;
 }
 
+// combines all 4 functions to find if board is valid or not
 bool validSudoku(const std::vector<std::vector<int>>& board) {
     return (validRows(board) && validCols(board) && validSquares(board));
 }
