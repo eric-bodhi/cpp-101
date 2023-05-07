@@ -1,4 +1,4 @@
-#include <iostream>
+#include "generator.h"
 #include <vector>
 #include <algorithm>
 #include <random>
