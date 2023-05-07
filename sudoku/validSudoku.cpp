@@ -1,5 +1,6 @@
 #include <vector>
 #include <algorithm>
+#include "validSudoku.h"
 
 bool validUnit(const std::vector<int>& unit) {
     std::vector<int> seen;
