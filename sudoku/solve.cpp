@@ -1,5 +1,6 @@
 #include "generator.cpp"
 #include "validSudoku.cpp"
+#include "solve.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
