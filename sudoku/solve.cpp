@@ -1,6 +1,4 @@
-#include "generator.cpp"
-#include "validSudoku.cpp"
-#include "solve.h"
+#include "solve.hpp"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -63,5 +61,4 @@ bool solve(std::vector<std::vector<int>>& board) {
     }
 
     return false;
-
-}  
+}

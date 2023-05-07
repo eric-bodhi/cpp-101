@@ -1,4 +1,4 @@
-#include "generator.h"
+#include "generator.hpp"
 #include <vector>
 #include <algorithm>
 #include <random>
@@ -17,7 +17,7 @@ int pattern(int r, int c, int base) {
     return (base * (r % base) + r / base + c) % side;
 }
 
-std::vector<std::vector<int>> generate_board() {
+std::vector<std::vector<int>> generate() {
     int base = 3;
     int side = base * base;
 
@@ -53,7 +53,7 @@ std::vector<std::vector<int>> generate_board() {
     return board;
 }
 
-std::vector<std::vector<int>> makePlayable(std::vector<std::vector<int>> board, const int val) {
+std::vector<std::vector<int>> makePlayable(std::vector<std::vector<int>>& board, int val) {
     std::vector<int> indices(81);
     std::iota(indices.begin(), indices.end(), 0);
 
