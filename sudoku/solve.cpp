@@ -68,3 +68,4 @@ bool solve(std::vector<std::vector<int>>& board) {
     }
 
     return false;
+}
