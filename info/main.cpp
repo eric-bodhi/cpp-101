@@ -5,6 +5,7 @@
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/mount.h>
+#include <sys/resource.h>
 
 int main() {
     // Get the hostname
@@ -38,10 +39,19 @@ int main() {
         free_size = fs_info.f_bfree * fs_info.f_bsize / (1024*1024*1024);
     }
 
+    // Get the maximum resident set size
+    struct rusage usage;
+    getrusage(RUSAGE_SELF, &usage);
+    long maxrss = usage.ru_maxrss; // in kilobytes
+
+    // Convert to gigabytes
+    double gb = maxrss / (1024.0*1024.0);
+
     std::cout << "Hostname: " << hostname << std::endl;
     std::cout << "OS version: " << os_version << std::endl;
-    std::cout << "Memory Used: " << total_size - free_size << " GB" << "\n";
-    std::cout << "Free Memory: " << free_size << " GB" << "\n";
+    std::cout << "Total disk space: " << total_size << " GB" << "\n";
+    std::cout << "Free disk space: " << free_size << " GB" << "\n";
+    std::cout << "Memory used: " << gb << " GB" << std::endl;
 
     return 0;
 }
