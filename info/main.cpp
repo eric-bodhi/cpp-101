@@ -8,12 +8,10 @@
 #include <sys/mount.h>
 #include <sys/resource.h>
 
-// global vars
-char buffer[1024];
-size_t size = sizeof(buffer);
-
 // function to get hostname
 std::string hostname() {
+    char buffer[1024];
+    size_t size = sizeof(buffer);
     std::string host_name;
 
     if (sysctlbyname("kern.hostname", &buffer, &size, NULL, 0) == 0) {
@@ -32,8 +30,11 @@ std::string hostname() {
 
 // find os version
 std::string osVersion() {
+    char buffer[1024];
+    size_t size = sizeof(buffer);
     std::string os_version;
     size = sizeof(buffer);
+    
     if (sysctlbyname("kern.osrelease", &buffer, &size, NULL, 0) == 0) {
         os_version = buffer;
     }
