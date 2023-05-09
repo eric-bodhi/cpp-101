@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <string>
 #include <sys/sysctl.h>
 #include <cstring>
@@ -7,14 +8,13 @@
 #include <sys/mount.h>
 #include <sys/resource.h>
 
-int main() {
-    // Get the hostname
+// global vars
+char buffer[1024];
+size_t size = sizeof(buffer);
+
+// function to get hostname
+std::string hostname() {
     std::string hostname;
-    char buffer[1024];
-    size_t size = sizeof(buffer);
-    struct statfs fs_info;
-    unsigned long long total_size, free_size, used_size;
-    const char* path = "/System/Volumes/Data";  // path to the file system you want to check
 
     if (sysctlbyname("kern.hostname", &buffer, &size, NULL, 0) == 0) {
         hostname = buffer;
@@ -27,18 +27,36 @@ int main() {
         hostname = hostname.substr(0, dot_pos);
     }
 
-    // Get the OS version
+    return hostname;
+}
+
+// find os version
+std::string osVersion() {
     std::string os_version;
     size = sizeof(buffer);
     if (sysctlbyname("kern.osrelease", &buffer, &size, NULL, 0) == 0) {
         os_version = buffer;
     }
 
+    return os_version;
+}
+
+// find storage of the disk computer is using
+std::vector<unsigned long long> storage() {
+    struct statfs fs_info;
+    unsigned long long total_size, free_size;
+    const char* path = "/System/Volumes/Data";  // path to the file system you want to check
+
     if (statfs(path, &fs_info) == 0) {
         total_size = static_cast<double>(fs_info.f_blocks * fs_info.f_bsize) / (1024*1024*1024);
         free_size = fs_info.f_bfree * fs_info.f_bsize / (1024*1024*1024);
     }
-    
+
+    return std::vector<unsigned long long>({total_size, free_size});
+}
+
+// print out logo and information
+void logo(std::string os_version, std::string hostname, unsigned long long total_size, unsigned long long free_size) {
     const std::string logo[17] =
     {
         "\x1b[38;5;76;1m                    'c.        ",
@@ -76,6 +94,17 @@ int main() {
     std::cout << logo[14] << "\n";
     std::cout << logo[15] << "\n";
     std::cout << logo[16] << "\n";
+}
+
+// wrap it all together and call them all
+int main() {
+    std::string os_version = osVersion();
+    std::string host_name = hostname();
+    std::vector<unsigned long long> res = storage();
+    unsigned long long total_size = res[0];
+    unsigned long long free_size = res[1];
+
+    logo(os_version, host_name, total_size, free_size);
 
     return 0;
 }
