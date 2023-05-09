@@ -14,20 +14,20 @@ size_t size = sizeof(buffer);
 
 // function to get hostname
 std::string hostname() {
-    std::string hostname;
+    std::string host_name;
 
     if (sysctlbyname("kern.hostname", &buffer, &size, NULL, 0) == 0) {
-        hostname = buffer;
+        host_name = buffer;
     }
 
     // Find the first occurrence of the '.' character in the hostname
-    size_t dot_pos = hostname.find('.');
+    size_t dot_pos = host_name.find('.');
     if (dot_pos != std::string::npos) {
         // If the '.' character is found, truncate the hostname at the '.' character
-        hostname = hostname.substr(0, dot_pos);
+        host_name = host_name.substr(0, dot_pos);
     }
 
-    return hostname;
+    return host_name;
 }
 
 // find os version
