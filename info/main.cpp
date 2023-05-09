@@ -98,13 +98,9 @@ void logo(std::string os_version, std::string hostname, unsigned long long total
 
 // wrap it all together and call them all
 int main() {
-    std::string os_version = osVersion();
-    std::string host_name = hostname();
     std::vector<unsigned long long> res = storage();
-    unsigned long long total_size = res[0];
-    unsigned long long free_size = res[1];
 
-    logo(os_version, host_name, total_size, free_size);
+    logo(osVersion(), hostname(), res[0], res[1]);
 
     return 0;
 }
