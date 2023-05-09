@@ -1,0 +1,3 @@
+/Users/ericfloyd/github/cpp-101/info/build/CMakeFiles/info.dir
+/Users/ericfloyd/github/cpp-101/info/build/CMakeFiles/edit_cache.dir
+/Users/ericfloyd/github/cpp-101/info/build/CMakeFiles/rebuild_cache.dir
