@@ -35,10 +35,10 @@ int main() {
     }
 
     if (statfs(path, &fs_info) == 0) {
-    total_size = static_cast<double>(fs_info.f_blocks * fs_info.f_bsize) / (1024*1024*1024);
-    free_size = fs_info.f_bfree * fs_info.f_bsize / (1024*1024*1024);
-    unsigned long long used_size = (fs_info.f_blocks - fs_info.f_bfree) * fs_info.f_bsize / (1024*1024*1024);    }
-
+        total_size = static_cast<double>(fs_info.f_blocks * fs_info.f_bsize) / (1024*1024*1024);
+        free_size = fs_info.f_bfree * fs_info.f_bsize / (1024*1024*1024);
+    }
+    
     const std::string logo[17] =
     {
         "\x1b[38;5;76;1m                    'c.        ",
