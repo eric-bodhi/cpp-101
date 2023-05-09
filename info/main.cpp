@@ -51,6 +51,10 @@ std::vector<unsigned long long> storage() {
         total_size = static_cast<double>(fs_info.f_blocks * fs_info.f_bsize) / (1024*1024*1024);
         free_size = fs_info.f_bfree * fs_info.f_bsize / (1024*1024*1024);
     }
+     
+    else {
+        throw std::runtime_error("Failed to check file system");
+    }
 
     return std::vector<unsigned long long>({total_size, free_size});
 }
