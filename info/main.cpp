@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <utility>
 #include <string>
 #include <sys/sysctl.h>
 #include <cstring>
@@ -42,7 +42,7 @@ std::string osVersion() {
 }
 
 // find storage of the disk computer is using
-std::vector<unsigned long long> storage() {
+std::pair<unsigned long long, unsigned long long> storage() {
     struct statfs fs_info;
     unsigned long long total_size, free_size;
     const char* path = "/System/Volumes/Data";  // path to the file system you want to check
@@ -56,7 +56,7 @@ std::vector<unsigned long long> storage() {
         throw std::runtime_error("Failed to check file system");
     }
 
-    return std::vector<unsigned long long>({total_size, free_size});
+    return std::make_pair(total_size, free_size);
 }
 
 // print out logo and information
@@ -102,9 +102,8 @@ void logo(std::string os_version, std::string hostname, unsigned long long total
 
 // wrap it all together and call them all
 int main() {
-    std::vector<unsigned long long> res = storage();
-
-    logo(osVersion(), hostname(), res[0], res[1]);
+    std::pair<unsigned long long, unsigned long long> res = storage();
+    logo(osVersion(), hostname(), res.first, res.second);
 
     return 0;
 }
