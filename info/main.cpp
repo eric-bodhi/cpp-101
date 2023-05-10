@@ -34,7 +34,7 @@ std::string osVersion() {
     size_t size = sizeof(buffer);
     std::string os_version;
     size = sizeof(buffer);
-    
+
     if (sysctlbyname("kern.osrelease", &buffer, &size, NULL, 0) == 0) {
         os_version = buffer;
     }
@@ -103,7 +103,7 @@ void logo(std::string os_version, std::string hostname, unsigned long long total
 
 // wrap it all together and call them all
 int main() {
-    std::pair<unsigned long long, unsigned long long> res = storage();
+    auto res = storage();
     logo(osVersion(), hostname(), res.first, res.second);
 
     return 0;
