@@ -9,8 +9,8 @@ public:
     void generate_board();
     void make_playable(int num_blanks);
     void solve();
-    bool is_valid();
-    std::vector<std::vector<int>> getBoard();
+    bool is_valid() const;
+    std::vector<std::vector<int>> getBoard() const;
 
 private:
     std::vector<std::vector<int>> board;

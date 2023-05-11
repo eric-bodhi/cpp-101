@@ -17,10 +17,10 @@ void Sudoku::solve() {
     ::solve(this->board);
 }
 
-bool Sudoku::is_valid() {
+bool Sudoku::is_valid() const {
     return validSudoku(this->board);
 }
 
-std::vector<std::vector<int>> Sudoku::getBoard() {
+std::vector<std::vector<int>> Sudoku::getBoard() const {
     return this->board;
 }
