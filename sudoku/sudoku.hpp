@@ -1,15 +1,19 @@
-#ifndef SUDOKU_H
-#define SUDOKU_H
+#ifndef SUDOKU_HPP
+#define SUDOKU_HPP
 
 #include <vector>
 
 class Sudoku {
 public:
     Sudoku();
-    std::vector<std::vector<int>> generate_board();
-    std::vector<std::vector<int>> make_playable(std::vector<std::vector<int>>& board, int num_blanks);
-    void solve(std::vector<std::vector<int>>& board);
-    bool is_valid(std::vector<std::vector<int>>& board);
+    void generate_board();
+    void make_playable(int num_blanks);
+    void solve();
+    bool is_valid();
+    std::vector<std::vector<int>> getBoard();
+
+private:
+    std::vector<std::vector<int>> board;
 };
 
-#endif
+#endif // SUDOKU_HPP

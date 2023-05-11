@@ -1,23 +1,26 @@
-#include "generator.hpp"
-#include "validSudoku.hpp"
-#include "solve.hpp"
 #include "sudoku.hpp"
-#include <vector>
+#include "generator.hpp"
+#include "solve.hpp"
+#include "validSudoku.hpp"
 
-Sudoku::Sudoku() {} // creates sudoku class
+Sudoku::Sudoku() : board(9, std::vector<int>(9)) {}
 
-std::vector<std::vector<int>> Sudoku::generate_board() { // uses generator.hpp's generate() function to create class method
-    return generate();
+void Sudoku::generate_board() {
+    this->board = generate();
 }
 
-std::vector<std::vector<int>> Sudoku::make_playable(std::vector<std::vector<int>>& board, int num_blanks) { // uses generator.hpp's makePlayable function to create the class method
-    return makePlayable(board, num_blanks);
+void Sudoku::make_playable(int num_blanks) {
+    this->board = makePlayable(this->board, num_blanks);
 }
 
-void Sudoku::solve(std::vector<std::vector<int>>& board) { // uses solve.hpp's solve function to recursively backtrack and solve the given board
-    ::solve(board);
+void Sudoku::solve() {
+    ::solve(this->board);
 }
 
-bool Sudoku::is_valid(std::vector<std::vector<int>>& board) { // uses validSudoku.hpp's validSudoku function to check if the board is valid 
-    return validSudoku(board);
+bool Sudoku::is_valid() {
+    return validSudoku(this->board);
+}
+
+std::vector<std::vector<int>> Sudoku::getBoard() {
+    return this->board;
 }

@@ -661,7 +661,7 @@ CMakeFiles/Sudoku.dir/solve.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/solve.
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/math.h
 
 CMakeFiles/Sudoku.dir/sudoku.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/sudoku.cpp \
-  /Users/ericfloyd/github/cpp-101/sudoku/generator.hpp \
+  /Users/ericfloyd/github/cpp-101/sudoku/sudoku.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -829,9 +829,9 @@ CMakeFiles/Sudoku.dir/sudoku.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/sudok
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/bit \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.hpp \
+  /Users/ericfloyd/github/cpp-101/sudoku/generator.hpp \
   /Users/ericfloyd/github/cpp-101/sudoku/solve.hpp \
-  /Users/ericfloyd/github/cpp-101/sudoku/sudoku.hpp
+  /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.hpp
 
 CMakeFiles/Sudoku.dir/validSudoku.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/vector \
