@@ -5,6 +5,7 @@
 #include "solve.hpp"
 #include "validSudoku.hpp"
 
+// function to print board in digestible manor
 void printBoard(const std::vector<std::vector<int>> &board) {
     for (const auto &row : board) {
         for (const auto &i : row) {
