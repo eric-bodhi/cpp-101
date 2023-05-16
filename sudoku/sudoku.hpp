@@ -1,5 +1,4 @@
-#ifndef SUDOKU_HPP
-#define SUDOKU_HPP
+#pragma once
 
 #include <vector>
 #include "grid.hpp"
@@ -30,4 +29,4 @@ private:
     grid board;
 };
 
-#endif // SUDOKU_HPP
+#pragma once

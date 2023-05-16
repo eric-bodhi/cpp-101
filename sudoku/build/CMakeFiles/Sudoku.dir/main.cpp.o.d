@@ -232,4 +232,5 @@ CMakeFiles/Sudoku.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__split_buffer \
   /Users/ericfloyd/github/cpp-101/sudoku/sudoku.hpp \
-  /Users/ericfloyd/github/cpp-101/sudoku/grid.hpp
+  /Users/ericfloyd/github/cpp-101/sudoku/grid.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/optional

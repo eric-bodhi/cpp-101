@@ -1,5 +1,4 @@
-#ifndef GRID_HPP
-#define GRID_HPP
+#pragma once
 
 #include <vector>
 
@@ -12,4 +11,4 @@ struct grid {
     void place(int row, int col, int val);
 };
 
-#endif // GRID_HPP
+#pragma once

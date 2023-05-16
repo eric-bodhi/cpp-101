@@ -201,3 +201,6 @@ std::vector<int> generateSequence(std::vector<int> const &base) {
             sequence.push_back(g * base.size() + x);
         }
     }
+
+    return sequence;
+}

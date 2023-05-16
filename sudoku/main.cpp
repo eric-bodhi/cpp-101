@@ -19,15 +19,15 @@ int main() {
     Sudoku s; // intialize sudkou class obj
     s.generate_board();
 
-    printBoard(s.getBoard());
+    printBoard(s.getBoard().data);
 
     s.make_playable(40);
 
-    printBoard(s.getBoard());
+    printBoard(s.getBoard().data);
 
     s.solve();
 
-    printBoard(s.getBoard());
+    printBoard(s.getBoard().data);
 
     std::cout << s.is_valid() << "\n";
 
