@@ -7,26 +7,14 @@
 },
 {
   "directory": "/Users/ericfloyd/github/cpp-101/sudoku/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -o CMakeFiles/Sudoku.dir/generator.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/generator.cpp",
-  "file": "/Users/ericfloyd/github/cpp-101/sudoku/generator.cpp",
-  "output": "CMakeFiles/Sudoku.dir/generator.cpp.o"
-},
-{
-  "directory": "/Users/ericfloyd/github/cpp-101/sudoku/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -o CMakeFiles/Sudoku.dir/solve.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/solve.cpp",
-  "file": "/Users/ericfloyd/github/cpp-101/sudoku/solve.cpp",
-  "output": "CMakeFiles/Sudoku.dir/solve.cpp.o"
-},
-{
-  "directory": "/Users/ericfloyd/github/cpp-101/sudoku/build",
   "command": "/usr/bin/clang++   -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -o CMakeFiles/Sudoku.dir/sudoku.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/sudoku.cpp",
   "file": "/Users/ericfloyd/github/cpp-101/sudoku/sudoku.cpp",
   "output": "CMakeFiles/Sudoku.dir/sudoku.cpp.o"
 },
 {
   "directory": "/Users/ericfloyd/github/cpp-101/sudoku/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -o CMakeFiles/Sudoku.dir/validSudoku.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.cpp",
-  "file": "/Users/ericfloyd/github/cpp-101/sudoku/validSudoku.cpp",
-  "output": "CMakeFiles/Sudoku.dir/validSudoku.cpp.o"
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -o CMakeFiles/Sudoku.dir/grid.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/grid.cpp",
+  "file": "/Users/ericfloyd/github/cpp-101/sudoku/grid.cpp",
+  "output": "CMakeFiles/Sudoku.dir/grid.cpp.o"
 }
 ]

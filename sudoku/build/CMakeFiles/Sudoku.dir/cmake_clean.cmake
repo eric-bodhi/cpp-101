@@ -1,14 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Sudoku.dir/generator.cpp.o"
-  "CMakeFiles/Sudoku.dir/generator.cpp.o.d"
+  "CMakeFiles/Sudoku.dir/grid.cpp.o"
+  "CMakeFiles/Sudoku.dir/grid.cpp.o.d"
   "CMakeFiles/Sudoku.dir/main.cpp.o"
   "CMakeFiles/Sudoku.dir/main.cpp.o.d"
-  "CMakeFiles/Sudoku.dir/solve.cpp.o"
-  "CMakeFiles/Sudoku.dir/solve.cpp.o.d"
   "CMakeFiles/Sudoku.dir/sudoku.cpp.o"
   "CMakeFiles/Sudoku.dir/sudoku.cpp.o.d"
-  "CMakeFiles/Sudoku.dir/validSudoku.cpp.o"
-  "CMakeFiles/Sudoku.dir/validSudoku.cpp.o.d"
   "Sudoku"
   "Sudoku.pdb"
 )

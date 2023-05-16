@@ -83,38 +83,10 @@ CMakeFiles/Sudoku.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sudoku.dir/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ericfloyd/github/cpp-101/sudoku/main.cpp -o CMakeFiles/Sudoku.dir/main.cpp.s
 
-CMakeFiles/Sudoku.dir/generator.cpp.o: CMakeFiles/Sudoku.dir/flags.make
-CMakeFiles/Sudoku.dir/generator.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/generator.cpp
-CMakeFiles/Sudoku.dir/generator.cpp.o: CMakeFiles/Sudoku.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Sudoku.dir/generator.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sudoku.dir/generator.cpp.o -MF CMakeFiles/Sudoku.dir/generator.cpp.o.d -o CMakeFiles/Sudoku.dir/generator.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/generator.cpp
-
-CMakeFiles/Sudoku.dir/generator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sudoku.dir/generator.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ericfloyd/github/cpp-101/sudoku/generator.cpp > CMakeFiles/Sudoku.dir/generator.cpp.i
-
-CMakeFiles/Sudoku.dir/generator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sudoku.dir/generator.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ericfloyd/github/cpp-101/sudoku/generator.cpp -o CMakeFiles/Sudoku.dir/generator.cpp.s
-
-CMakeFiles/Sudoku.dir/solve.cpp.o: CMakeFiles/Sudoku.dir/flags.make
-CMakeFiles/Sudoku.dir/solve.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/solve.cpp
-CMakeFiles/Sudoku.dir/solve.cpp.o: CMakeFiles/Sudoku.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Sudoku.dir/solve.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sudoku.dir/solve.cpp.o -MF CMakeFiles/Sudoku.dir/solve.cpp.o.d -o CMakeFiles/Sudoku.dir/solve.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/solve.cpp
-
-CMakeFiles/Sudoku.dir/solve.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sudoku.dir/solve.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ericfloyd/github/cpp-101/sudoku/solve.cpp > CMakeFiles/Sudoku.dir/solve.cpp.i
-
-CMakeFiles/Sudoku.dir/solve.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sudoku.dir/solve.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ericfloyd/github/cpp-101/sudoku/solve.cpp -o CMakeFiles/Sudoku.dir/solve.cpp.s
-
 CMakeFiles/Sudoku.dir/sudoku.cpp.o: CMakeFiles/Sudoku.dir/flags.make
 CMakeFiles/Sudoku.dir/sudoku.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/sudoku.cpp
 CMakeFiles/Sudoku.dir/sudoku.cpp.o: CMakeFiles/Sudoku.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Sudoku.dir/sudoku.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Sudoku.dir/sudoku.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sudoku.dir/sudoku.cpp.o -MF CMakeFiles/Sudoku.dir/sudoku.cpp.o.d -o CMakeFiles/Sudoku.dir/sudoku.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/sudoku.cpp
 
 CMakeFiles/Sudoku.dir/sudoku.cpp.i: cmake_force
@@ -125,39 +97,35 @@ CMakeFiles/Sudoku.dir/sudoku.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sudoku.dir/sudoku.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ericfloyd/github/cpp-101/sudoku/sudoku.cpp -o CMakeFiles/Sudoku.dir/sudoku.cpp.s
 
-CMakeFiles/Sudoku.dir/validSudoku.cpp.o: CMakeFiles/Sudoku.dir/flags.make
-CMakeFiles/Sudoku.dir/validSudoku.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.cpp
-CMakeFiles/Sudoku.dir/validSudoku.cpp.o: CMakeFiles/Sudoku.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Sudoku.dir/validSudoku.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sudoku.dir/validSudoku.cpp.o -MF CMakeFiles/Sudoku.dir/validSudoku.cpp.o.d -o CMakeFiles/Sudoku.dir/validSudoku.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.cpp
+CMakeFiles/Sudoku.dir/grid.cpp.o: CMakeFiles/Sudoku.dir/flags.make
+CMakeFiles/Sudoku.dir/grid.cpp.o: /Users/ericfloyd/github/cpp-101/sudoku/grid.cpp
+CMakeFiles/Sudoku.dir/grid.cpp.o: CMakeFiles/Sudoku.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Sudoku.dir/grid.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sudoku.dir/grid.cpp.o -MF CMakeFiles/Sudoku.dir/grid.cpp.o.d -o CMakeFiles/Sudoku.dir/grid.cpp.o -c /Users/ericfloyd/github/cpp-101/sudoku/grid.cpp
 
-CMakeFiles/Sudoku.dir/validSudoku.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sudoku.dir/validSudoku.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.cpp > CMakeFiles/Sudoku.dir/validSudoku.cpp.i
+CMakeFiles/Sudoku.dir/grid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sudoku.dir/grid.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ericfloyd/github/cpp-101/sudoku/grid.cpp > CMakeFiles/Sudoku.dir/grid.cpp.i
 
-CMakeFiles/Sudoku.dir/validSudoku.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sudoku.dir/validSudoku.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ericfloyd/github/cpp-101/sudoku/validSudoku.cpp -o CMakeFiles/Sudoku.dir/validSudoku.cpp.s
+CMakeFiles/Sudoku.dir/grid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sudoku.dir/grid.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ericfloyd/github/cpp-101/sudoku/grid.cpp -o CMakeFiles/Sudoku.dir/grid.cpp.s
 
 # Object files for target Sudoku
 Sudoku_OBJECTS = \
 "CMakeFiles/Sudoku.dir/main.cpp.o" \
-"CMakeFiles/Sudoku.dir/generator.cpp.o" \
-"CMakeFiles/Sudoku.dir/solve.cpp.o" \
 "CMakeFiles/Sudoku.dir/sudoku.cpp.o" \
-"CMakeFiles/Sudoku.dir/validSudoku.cpp.o"
+"CMakeFiles/Sudoku.dir/grid.cpp.o"
 
 # External object files for target Sudoku
 Sudoku_EXTERNAL_OBJECTS =
 
 Sudoku: CMakeFiles/Sudoku.dir/main.cpp.o
-Sudoku: CMakeFiles/Sudoku.dir/generator.cpp.o
-Sudoku: CMakeFiles/Sudoku.dir/solve.cpp.o
 Sudoku: CMakeFiles/Sudoku.dir/sudoku.cpp.o
-Sudoku: CMakeFiles/Sudoku.dir/validSudoku.cpp.o
+Sudoku: CMakeFiles/Sudoku.dir/grid.cpp.o
 Sudoku: CMakeFiles/Sudoku.dir/build.make
 Sudoku: CMakeFiles/Sudoku.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Sudoku"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Sudoku.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,9 +1,6 @@
 #include <iostream>
 #include <vector>
 #include "sudoku.hpp"
-#include "generator.hpp"
-#include "solve.hpp"
-#include "validSudoku.hpp"
 
 // function to print board in digestible manor
 void printBoard(const std::vector<std::vector<int>> &board) {

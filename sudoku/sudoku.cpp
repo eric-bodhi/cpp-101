@@ -1,26 +1,205 @@
 #include "sudoku.hpp"
-#include "generator.hpp"
-#include "solve.hpp"
-#include "validSudoku.hpp"
+#include "grid.hpp"
+#include <algorithm>
+#include <vector>
+#include <random>
+#include <iterator>
 
-Sudoku::Sudoku() : board(9, std::vector<int>(9)) {}
+Sudoku::Sudoku() : board() {}
 
 void Sudoku::generate_board() {
-    this->board = generate();
+    int base = 3;
+    int side = base * base;
+    
+    std::vector<int> rBase(base);
+    std::iota(rBase.begin(), rBase.end(), 0);
+    std::vector<int> rows;
+    std::vector<int> cols;
+    std::vector<int> nums(side);
+    std::iota(nums.begin(), nums.end(), 1);
+
+    for (auto g : shuffle(rBase)) {
+        for (auto r : shuffle(rBase)) {
+            rows.push_back(g * base + r);
+        }
+    }
+
+    for (auto g : shuffle(rBase)) {
+        for (auto c : shuffle(rBase)) {
+            cols.push_back(g * base + c);
+        }
+    }
+
+    nums = shuffle(nums);
+
+    for (int r = 0; r < rows.size(); r++) {
+        for (int c = 0; c < cols.size(); c++) {
+            this->board.place(r, c, nums[pattern(rows[r], cols[c], base)]);
+        }
+    }
 }
 
 void Sudoku::make_playable(int num_blanks) {
-    this->board = makePlayable(this->board, num_blanks);
+    std::vector<int> indices(81);
+    std::iota(indices.begin(), indices.end(), 0);
+
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(indices.begin(), indices.end(), g);
+
+    for (int i = 0; i < num_blanks; ++i) {
+        int index = indices[i];
+        this->board.place(index / 9, index % 9, 0);
+    }
 }
 
-void Sudoku::solve() {
-    ::solve(this->board);
+bool Sudoku::solve() {
+    std::pair<int, int> emptyCell = this->findEmptyCell(); // finds the first empty cell
+
+    if (emptyCell.first == -1 && emptyCell.second == -1) { // if no cell is found, board is solved
+        return true;
+    }
+
+    int row = emptyCell.first; // unpacks emptyCell
+    int col = emptyCell.second; // unpacks emptyCell
+
+    // finds which number that is able to be placed at row, col (empty cell)
+    for (int num = 1; num < 10; num++) {
+        if (this->validMove(num, row, col)) {
+            this->board.place(row, col, num); // if found then place the num at row, col
+
+            if (this->solve()) { // recursively continue
+                return true;
+            }
+        }
+
+        this->board.place(row, col, 0); // if it doesn't work out (false) then turn it back to 0 and backtrack
+    }
+
+    return false;
+}
+
+bool Sudoku::validMove(int val, int row, int col) const {
+    // checks if val is already in rows
+    if (std::find(this->board.data[row].begin(), this->board.data[row].end(), val) != this->board.data[row].end()) {
+        return false;
+    }
+
+    // checks if val is already in cols
+    for (const auto &r : this->board.data) {
+        if (val == r[col]) {
+            return false;
+        }
+    }
+
+    // checks if val is in the 3x3 row, col is in
+    for (int m = (std::floor(row / 3)) * 3; m < (std::floor(row / 3)) * 3 + 3; m++) {
+        for (int n = (std::floor(col / 3) * 3); n < (std::floor(col / 3)) * 3 + 3; n++) {
+            if (row != m && col != n && this->board.get(m, n) == val) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+std::pair<int, int> Sudoku::findEmptyCell() const {
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+            if (this->board.get(i, j) == 0) {
+                return std::pair<int, int>(i, j);
+            }
+        }
+    }
+
+    return std::pair<int, int>(-1, -1);
 }
 
 bool Sudoku::is_valid() const {
-    return validSudoku(this->board);
+    // combines all 4 functions to find if board is valid or not
+    return ((this->validRows() && this->validCols() && this->validSquares()));
 }
 
 std::vector<std::vector<int>> Sudoku::getBoard() const {
-    return this->board;
+    return this->board.data;
+}
+
+// checks if rows are valid (according to sudoku)
+bool Sudoku::validRows() const {
+    for (const auto &row : this->board.data) {
+        if (!validUnit(row)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// checks if cols are valid (according to sudoku)
+bool Sudoku::validCols() const {
+    std::vector<std::vector<int>> columns(9, std::vector<int>(9));
+
+    for (int c = 0; c < 9; c++) {
+        for (int r = 0; r < 9; r++) {
+            columns[c][r] = this->board.get(r, c);
+        }
+    }
+
+    for (const auto &col : columns) {
+        if (!validUnit(col)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// checks if squares are valid (according to sudoku)
+bool Sudoku::validSquares() const {
+    for (int i = 3; i < 10; i += 3) {
+        for (int j = 3; j < 10; j += 3) {
+            std::vector<int> square;
+
+            for (int k = 0; k < 3; ++k) {
+                square.insert(square.end(), this->board.data[i-3+k].begin() + (j-3), this->board.data[i-3+k].begin() + j);
+            }
+
+            if (!validUnit(square)) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+bool Sudoku::validUnit(const std::vector<int>& unit) const { 
+    std::vector<int> seen;
+
+    for (const auto &i : unit) {
+        if (std::find(seen.begin(), seen.end(), i) == seen.end()) {
+            seen.push_back(i);
+        }
+
+        else {
+            return false;
+        }
+    } 
+
+    return true;
+}
+
+std::vector<int> shuffle(const std::vector<int>& v) { 
+    std::vector<int> result = v;
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(result.begin(), result.end(), g);
+    return result;
+}
+
+// returns the sudoku baseline solution
+int pattern(int r, int c, int base) {
+    int side = base * base;
+    return (base * (r % base) + r / base + c) % side;
 }

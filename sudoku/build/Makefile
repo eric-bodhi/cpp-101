@@ -129,29 +129,29 @@ Sudoku/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/build
 .PHONY : Sudoku/fast
 
-generator.o: generator.cpp.o
-.PHONY : generator.o
+grid.o: grid.cpp.o
+.PHONY : grid.o
 
 # target to build an object file
-generator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/generator.cpp.o
-.PHONY : generator.cpp.o
+grid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/grid.cpp.o
+.PHONY : grid.cpp.o
 
-generator.i: generator.cpp.i
-.PHONY : generator.i
+grid.i: grid.cpp.i
+.PHONY : grid.i
 
 # target to preprocess a source file
-generator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/generator.cpp.i
-.PHONY : generator.cpp.i
+grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/grid.cpp.i
+.PHONY : grid.cpp.i
 
-generator.s: generator.cpp.s
-.PHONY : generator.s
+grid.s: grid.cpp.s
+.PHONY : grid.s
 
 # target to generate assembly for a file
-generator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/generator.cpp.s
-.PHONY : generator.cpp.s
+grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/grid.cpp.s
+.PHONY : grid.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -177,30 +177,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-solve.o: solve.cpp.o
-.PHONY : solve.o
-
-# target to build an object file
-solve.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/solve.cpp.o
-.PHONY : solve.cpp.o
-
-solve.i: solve.cpp.i
-.PHONY : solve.i
-
-# target to preprocess a source file
-solve.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/solve.cpp.i
-.PHONY : solve.cpp.i
-
-solve.s: solve.cpp.s
-.PHONY : solve.s
-
-# target to generate assembly for a file
-solve.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/solve.cpp.s
-.PHONY : solve.cpp.s
-
 sudoku.o: sudoku.cpp.o
 .PHONY : sudoku.o
 
@@ -225,30 +201,6 @@ sudoku.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/sudoku.cpp.s
 .PHONY : sudoku.cpp.s
 
-validSudoku.o: validSudoku.cpp.o
-.PHONY : validSudoku.o
-
-# target to build an object file
-validSudoku.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/validSudoku.cpp.o
-.PHONY : validSudoku.cpp.o
-
-validSudoku.i: validSudoku.cpp.i
-.PHONY : validSudoku.i
-
-# target to preprocess a source file
-validSudoku.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/validSudoku.cpp.i
-.PHONY : validSudoku.cpp.i
-
-validSudoku.s: validSudoku.cpp.s
-.PHONY : validSudoku.s
-
-# target to generate assembly for a file
-validSudoku.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/validSudoku.cpp.s
-.PHONY : validSudoku.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,21 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Sudoku"
-	@echo "... generator.o"
-	@echo "... generator.i"
-	@echo "... generator.s"
+	@echo "... grid.o"
+	@echo "... grid.i"
+	@echo "... grid.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... solve.o"
-	@echo "... solve.i"
-	@echo "... solve.s"
 	@echo "... sudoku.o"
 	@echo "... sudoku.i"
 	@echo "... sudoku.s"
-	@echo "... validSudoku.o"
-	@echo "... validSudoku.i"
-	@echo "... validSudoku.s"
 .PHONY : help
 
 
