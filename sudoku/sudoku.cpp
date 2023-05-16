@@ -4,6 +4,7 @@
 #include <vector>
 #include <random>
 #include <iterator>
+#include <optional>
 
 Sudoku::Sudoku() : board() {}
 
@@ -13,22 +14,10 @@ void Sudoku::generate_board() {
     
     std::vector<int> rBase(base);
     std::iota(rBase.begin(), rBase.end(), 0);
-    std::vector<int> rows;
-    std::vector<int> cols;
+    std::vector<int> rows = generateSequence(rBase);
+    std::vector<int> cols = generateSequence(rBase);
     std::vector<int> nums(side);
     std::iota(nums.begin(), nums.end(), 1);
-
-    for (auto g : shuffle(rBase)) {
-        for (auto r : shuffle(rBase)) {
-            rows.push_back(g * base + r);
-        }
-    }
-
-    for (auto g : shuffle(rBase)) {
-        for (auto c : shuffle(rBase)) {
-            cols.push_back(g * base + c);
-        }
-    }
 
     nums = shuffle(nums);
 
@@ -54,14 +43,13 @@ void Sudoku::make_playable(int num_blanks) {
 }
 
 bool Sudoku::solve() {
-    std::pair<int, int> emptyCell = this->findEmptyCell(); // finds the first empty cell
+    std::optional<std::pair<int, int>> emptyCell = this->findEmptyCell(); // finds the first empty cell
 
-    if (emptyCell.first == -1 && emptyCell.second == -1) { // if no cell is found, board is solved
-        return true;
+    if (!emptyCell.has_value()) {
+      return true;
     }
 
-    int row = emptyCell.first; // unpacks emptyCell
-    int col = emptyCell.second; // unpacks emptyCell
+    auto [row, col] = emptyCell.value(); // unpacks emptyCell
 
     // finds which number that is able to be placed at row, col (empty cell)
     for (int num = 1; num < 10; num++) {
@@ -104,16 +92,16 @@ bool Sudoku::validMove(int val, int row, int col) const {
     return true;
 }
 
-std::pair<int, int> Sudoku::findEmptyCell() const {
+std::optional<std::pair<int, int>> Sudoku::findEmptyCell() const {
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             if (this->board.get(i, j) == 0) {
-                return std::pair<int, int>(i, j);
+                return std::optional<std::pair<int, int>>(std::make_pair(i, j));
             }
         }
     }
 
-    return std::pair<int, int>(-1, -1);
+    return std::nullopt;
 }
 
 bool Sudoku::is_valid() const {
@@ -121,8 +109,8 @@ bool Sudoku::is_valid() const {
     return ((this->validRows() && this->validCols() && this->validSquares()));
 }
 
-std::vector<std::vector<int>> Sudoku::getBoard() const {
-    return this->board.data;
+grid Sudoku::getBoard() const {
+    return this->board;
 }
 
 // checks if rows are valid (according to sudoku)
@@ -203,3 +191,13 @@ int pattern(int r, int c, int base) {
     int side = base * base;
     return (base * (r % base) + r / base + c) % side;
 }
+
+std::vector<int> generateSequence(std::vector<int> const &base) {
+    std::vector<int> sequence;
+    sequence.reserve(base.size() * base.size());
+
+    for (const auto g : shuffle(base)) {
+        for (const auto x : shuffle(base)) {
+            sequence.push_back(g * base.size() + x);
+        }
+    }
