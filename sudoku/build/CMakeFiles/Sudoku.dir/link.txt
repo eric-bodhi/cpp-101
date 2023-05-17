@@ -1,1 +1,1 @@
-/usr/bin/clang++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Sudoku.dir/main.cpp.o CMakeFiles/Sudoku.dir/sudoku.cpp.o CMakeFiles/Sudoku.dir/grid.cpp.o -o Sudoku 
+/nix/store/dq0xwmsk1g0i2ayg6pb7y87na2knzylh-gcc-wrapper-11.3.0/bin/g++ CMakeFiles/Sudoku.dir/main.cpp.o CMakeFiles/Sudoku.dir/sudoku.cpp.o CMakeFiles/Sudoku.dir/grid.cpp.o -o Sudoku 
