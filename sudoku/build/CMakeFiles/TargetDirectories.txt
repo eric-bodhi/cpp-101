@@ -1,3 +1,0 @@
-/home/runner/cpp-101/sudoku/build/CMakeFiles/Sudoku.dir
-/home/runner/cpp-101/sudoku/build/CMakeFiles/edit_cache.dir
-/home/runner/cpp-101/sudoku/build/CMakeFiles/rebuild_cache.dir
