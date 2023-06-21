@@ -2,10 +2,13 @@
 
 #include <vector>
 
-struct grid {
+struct grid
+{
     std::vector<std::vector<int>> data;
 
-    grid() : data(9, std::vector<int>(9)) {}
+    grid() : data(9, std::vector<int>(9))
+    {
+    }
 
     int get(int row, int col) const;
     void place(int row, int col, int val);
