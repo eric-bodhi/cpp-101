@@ -16,7 +16,9 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477df82-783e-4d5e-b905-43d67b4ab3b4" name="Changes" comment="" />
+    <list default="true" id="a477df82-783e-4d5e-b905-43d67b4ab3b4" name="Changes" comment="formatting with clang-format">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,9 +98,9 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -133,6 +135,9 @@
       <workItem from="1687361480231" duration="743000" />
       <workItem from="1687362332201" duration="74000" />
       <workItem from="1687362415401" duration="2720000" />
+      <workItem from="1687378439346" duration="644000" />
+      <workItem from="1687379481762" duration="42000" />
+      <workItem from="1687380294633" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="Formatting">
       <created>1687035377034</created>
@@ -197,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687364004254</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="formatting with clang-format">
+      <created>1687379111970</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687379111970</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +252,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -258,7 +270,8 @@
     <MESSAGE value="testing cmake" />
     <MESSAGE value="testing cmake #2" />
     <MESSAGE value="commiting unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="commiting unversioned files" />
+    <MESSAGE value="formatting with clang-format" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting with clang-format" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
