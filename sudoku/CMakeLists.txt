@@ -4,7 +4,8 @@ project(Sudoku)
 set(SOURCES
         main.cpp
         sudoku.cpp
-        grid.cpp)
+        grid.cpp
+        test.cpp)
 
 set(CMAKE_CXX_STANDARD 20)
 

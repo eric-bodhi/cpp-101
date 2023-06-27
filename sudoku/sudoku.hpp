@@ -11,7 +11,7 @@ std::vector<int> generateSequence(std::vector<int> const &base);
 class Sudoku
 {
 public:
-    Sudoku();
+    Sudoku(const grid &initialBoard = grid());
     void generate_board();
     void make_playable(int num_blanks);
     bool solve();

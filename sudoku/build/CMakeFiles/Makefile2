@@ -45,10 +45,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.26.3/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.26.4/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.26.3/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.26.4/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -81,12 +81,12 @@ clean: CMakeFiles/Sudoku.dir/clean
 CMakeFiles/Sudoku.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sudoku.dir/build.make CMakeFiles/Sudoku.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=1,2,3,4 "Built target Sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Sudoku"
 .PHONY : CMakeFiles/Sudoku.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sudoku.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sudoku.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ericfloyd/github/cpp-101/sudoku/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sudoku.dir/rule

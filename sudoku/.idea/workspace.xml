@@ -18,6 +18,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a477df82-783e-4d5e-b905-43d67b4ab3b4" name="Changes" comment="formatting with clang-format">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tictactoe/.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/../tictactoe/.clang-format" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tictactoe/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tictactoe/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tictactoe/board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tictactoe/board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tictactoe/board.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tictactoe/board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tictactoe/game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tictactoe/game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tictactoe/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tictactoe/game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tictactoe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tictactoe/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +104,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -138,6 +138,8 @@
       <workItem from="1687378439346" duration="644000" />
       <workItem from="1687379481762" duration="42000" />
       <workItem from="1687380294633" duration="217000" />
+      <workItem from="1687811559207" duration="842000" />
+      <workItem from="1687821472199" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Formatting">
       <created>1687035377034</created>

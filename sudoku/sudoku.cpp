@@ -6,7 +6,7 @@
 #include <random>
 #include <vector>
 
-Sudoku::Sudoku() : board()
+Sudoku::Sudoku(const grid &initialBoard) : board(initialBoard)
 {
 }
 

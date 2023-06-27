@@ -1,39 +1,22 @@
 #include "sudoku.hpp"
-#include <iostream>
-#include <vector>
-
-// function to print board in digestible manor
-void printBoard(const std::vector<std::vector<int>> &board)
-{
-    for (const auto &row : board)
-    {
-        for (const auto &i : row)
-        {
-            std::cout << i << " ";
-        }
-
-        std::cout << "\n";
-    }
-
-    std::cout << "\n";
-}
+#include "test.hpp"
 
 int main()
 {
     Sudoku s; // intialize sudkou class obj
     s.generate_board();
 
-    printBoard(s.getBoard().data);
+    s.getBoard().printBoard();
 
     s.make_playable(40);
 
-    printBoard(s.getBoard().data);
+    s.getBoard().printBoard();
 
     s.solve();
 
-    printBoard(s.getBoard().data);
+    s.getBoard().printBoard();
 
-    std::cout << s.is_valid() << "\n";
+    test();
 
     return 0;
 }
